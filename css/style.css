@@ -97,11 +97,11 @@ body{
         min-height: 90%;
     }
     .card-desc h1{
-        font-size: 26px;
+        font-size: 27px;
         text-align: center;
     }
     .card-desc p{
-        font-size: 15px !important;
+        font-size: 14px !important;
         text-align: center;
     }
     .card{
