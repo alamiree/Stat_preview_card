@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.template-content{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "card image";
+}
+
+
+.card{
+    grid-area: card;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card-content{
+    height: 80%;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.card-desc h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.card-desc h1 span{
+    color: hsl(277, 64%, 61%);
+}
+
+.card-desc p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 19px;
+}
+
+.card-stats{
+    display: flex;
+    justify-content: space-between;
+}
+.card-stats span{
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+}
+
+.template-img{
+    grid-area: image;
+    position: relative;
+    border-radius: 5px !important;
+}
+.template-img img{
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.template-img .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hsla(277, 64%, 61%, 0.5);
+}
+
+@media(max-width: 767px){
+    .container{
+        min-height: 1000px;
+    }
+    .template-content{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "image" "card"; 
+        grid-template-rows: repeat(2, auto);
+        margin-left: 20px;
+        margin-right: 20px;
+        min-height: 90%;
+    }
+    .card-desc h1{
+        font-size: 26px;
+        text-align: center;
+    }
+    .card-desc p{
+        font-size: 15px !important;
+        text-align: center;
+    }
+    .card{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .card-stats{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 210px;
+        margin-top: 20px;
+    }
+    .template-img img{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
